@@ -2,134 +2,100 @@
 
 # 🌯 KEBAB EMPIRE
 
-### Premium Kebab Landing Page Experience
+### Landing Page Premium untuk Brand Kebab Modern
 
-A cinematic, modern, and conversion-focused landing page designed for a premium kebab brand.
+Website landing page modern, elegan, dan berorientasi konversi yang dirancang untuk brand kebab premium.
 
-Built with pure HTML, CSS, and JavaScript, inspired by award-winning web experiences and modern food-tech branding.
-
-<img src="assets/images/preview.png" alt="Kebab Empire Preview" width="100%">
+Dibangun menggunakan **HTML, CSS, dan JavaScript murni** dengan fokus pada **UI/UX modern, performa, dan pengalaman pengguna yang menarik**.
 
 <br>
 
-![HTML](https://img.shields.io/badge/HTML5-Structure-orange?style=for-the-badge&logo=html5)
-![CSS](https://img.shields.io/badge/CSS3-Styling-blue?style=for-the-badge&logo=css3)
-![JavaScript](https://img.shields.io/badge/JavaScript-Interactive-yellow?style=for-the-badge&logo=javascript)
+![HTML](https://img.shields.io/badge/HTML5-Struktur-orange?style=for-the-badge&logo=html5)
+![CSS](https://img.shields.io/badge/CSS3-Tampilan-blue?style=for-the-badge&logo=css3)
+![JavaScript](https://img.shields.io/badge/JavaScript-Interaktif-yellow?style=for-the-badge&logo=javascript)
 ![Responsive](https://img.shields.io/badge/Responsive-Mobile%20First-success?style=for-the-badge)
 
 </div>
 
 ---
 
-## ✨ About The Project
+## 📖 Tentang Proyek
 
-Kebab Empire is not just another food landing page.
+**Kebab Empire** merupakan website landing page yang dirancang untuk menghadirkan kesan premium pada sebuah bisnis kuliner.
 
-This project was designed to simulate the digital presence of a modern premium food brand, combining elegant visuals, immersive storytelling, smooth interactions, and high-converting user experience principles.
+Tidak hanya menampilkan produk, website ini juga berfokus pada pengalaman pengguna melalui desain modern, animasi halus, navigasi yang nyaman, serta tata letak yang dirancang untuk meningkatkan minat pelanggan.
 
-The goal is to create a website that feels more like a luxury brand than a typical fast-food restaurant.
+Proyek ini cocok digunakan sebagai:
+
+- Website bisnis kebab
+- Website restoran atau kuliner
+- Landing page promosi produk makanan
+- Portofolio Front-End Developer
+- Studi kasus UI/UX Design
 
 ---
 
-## 🎯 Key Highlights
+## ✨ Fitur Utama
 
-### 🎬 Cinematic Hero Experience
+### 🎬 Hero Section Modern
 
-A full-screen immersive hero section designed to immediately capture user attention.
+Tampilan pembuka layar penuh dengan desain sinematik dan tombol Call To Action yang menarik perhatian.
 
-### 🍔 Premium Menu Showcase
+### 🍔 Menu Produk Premium
 
-Beautifully presented signature products with modern hover interactions.
+Menampilkan produk unggulan dengan desain kartu modern dan efek interaktif.
 
-### 🔥 Conversion-Oriented Design
+### ⭐ Testimoni Pelanggan
 
-Every section is strategically structured to increase engagement and encourage ordering.
+Bagian ulasan pelanggan untuk meningkatkan kepercayaan pengunjung.
 
-### 📱 Fully Responsive
+### ⏳ Countdown Promo
 
-Optimized for every screen size:
+Fitur hitung mundur promosi agar pengunjung terdorong melakukan pembelian lebih cepat.
 
-- Mobile
+### 📩 Formulir Kontak
+
+Memudahkan pelanggan untuk menghubungi atau melakukan pemesanan.
+
+### 📱 Responsif di Semua Perangkat
+
+Tampilan optimal untuk:
+
+- Smartphone
 - Tablet
 - Laptop
 - Desktop
 
-### ⚡ Smooth Interactions
+---
 
-- Scroll animations
-- Micro interactions
-- Hover effects
-- Dynamic counters
-- Progress indicators
+## 🚀 Teknologi yang Digunakan
+
+| Teknologi | Fungsi |
+|------------|---------|
+| HTML5 | Struktur website |
+| CSS3 | Desain dan tata letak |
+| JavaScript | Interaktivitas website |
+| Google Fonts | Tipografi modern |
+| Remix Icons | Ikon website |
 
 ---
 
-# 🖼 Website Sections
+## 🧩 Fitur Interaktif
 
-| Section | Description |
-|----------|-------------|
-| 🏠 Hero | Main landing experience with CTA |
-| 📖 About | Brand story and product quality |
-| ⭐ Features | Why customers choose us |
-| 🍔 Menu | Signature kebab collection |
-| 🔥 Best Seller | Featured flagship product |
-| 💬 Testimonials | Customer experiences |
-| ⏳ Promo | Countdown-based special offer |
-| 📩 Contact | Direct ordering section |
-| 🧾 Footer | Navigation and social media |
-
----
-
-# 🚀 Features
-
-### UI & UX
-
-- Modern Premium Interface
-- Dark Luxury Theme
-- Glassmorphism Components
-- Gradient Effects
-- Smooth Navigation
-
-### Animation
-
+- Smooth Scrolling
 - Loading Screen
-- Scroll Reveal
-- Hover Interactions
+- Scroll Reveal Animation
 - Animated Statistics
-- Countdown Timer
+- Countdown Promo
+- Hover Effects
 - Progress Bar
-
-### Functionality
-
-- WhatsApp Integration
-- Contact Form
-- Responsive Navigation
-- Mobile Menu
-- Smooth Scroll
+- Mobile Navigation
+- WhatsApp Button
+- Micro Interactions
 
 ---
 
-# 🛠 Tech Stack
-
-```txt
-Frontend
-├── HTML5
-├── CSS3
-└── Vanilla JavaScript
-
-Design
-├── Glassmorphism
-├── Dark Premium Theme
-└── Responsive Design
-
-Assets
-├── Google Fonts
-└── Remix Icons
-```
-
----
-
-# 📂 Project Structure
+## 📂 Struktur Folder
 
 ```txt
 kebab-empire/
@@ -151,71 +117,103 @@ kebab-empire/
 
 ---
 
-# ⚙️ Getting Started
+## 🖼 Bagian Website
 
-### Clone Repository
+### 🏠 Beranda
+Halaman utama yang menampilkan identitas brand dan ajakan untuk melakukan pemesanan.
+
+### 📖 Tentang Kami
+Penjelasan mengenai kualitas bahan dan filosofi bisnis.
+
+### ⭐ Keunggulan
+Alasan mengapa pelanggan memilih Kebab Empire.
+
+### 🍔 Menu
+Katalog produk kebab unggulan.
+
+### 🔥 Produk Terlaris
+Highlight produk favorit pelanggan.
+
+### 💬 Testimoni
+Ulasan dan pengalaman pelanggan.
+
+### ⏳ Promo
+Informasi diskon dengan sistem countdown.
+
+### 📩 Kontak
+Formulir dan tombol pemesanan langsung.
+
+### 🧾 Footer
+Informasi tambahan, navigasi, dan media sosial.
+
+---
+
+## ⚙️ Cara Menjalankan Proyek
+
+### 1. Clone Repository
 
 ```bash
-git clone https://github.com/yourusername/kebab-empire.git
+git clone https://github.com/username/kebab-empire.git
 ```
 
-### Open Project
+### 2. Masuk ke Folder Proyek
 
 ```bash
 cd kebab-empire
 ```
 
-### Run
+### 3. Jalankan Website
 
-Simply open:
+Cukup buka file:
 
 ```bash
 index.html
 ```
 
-No additional setup required.
+menggunakan browser favorit Anda.
 
 ---
 
-# 📈 Future Roadmap
+## 📈 Rencana Pengembangan
 
-### Phase 1
+### Versi Berikutnya
 
-- [x] Premium Landing Page
-- [x] Responsive Layout
-- [x] Countdown Promo
-
-### Phase 2
-
-- [ ] Shopping Cart
-- [ ] Product Ordering System
-- [ ] Customer Dashboard
-
-### Phase 3
-
-- [ ] Backend Integration
-- [ ] Firebase Database
+- [ ] Sistem Keranjang Belanja
+- [ ] Integrasi Database
+- [ ] Dashboard Admin
+- [ ] Sistem Pemesanan Online
 - [ ] Payment Gateway
-- [ ] Admin Panel
+- [ ] Animasi GSAP
+- [ ] Multi Page Website
 
 ---
 
-# 🌟 Why This Project?
+## 🎯 Tujuan Proyek
 
-Most restaurant websites look outdated.
+Proyek ini dibuat untuk menggabungkan:
 
-Kebab Empire was created to explore how modern branding, storytelling, and interaction design can transform a simple food business into a premium digital experience.
+- Desain modern
+- Pengalaman pengguna yang baik
+- Performa website yang cepat
+- Struktur kode yang rapi
+- Tampilan yang cocok untuk kebutuhan bisnis nyata
 
 ---
-
-<div align="center">
 
 ## 👨‍💻 Developer
 
-Created with passion by **Mam Digital**
+Dibuat oleh **Mam Digital**
 
-### "Great food deserves great design."
+> *"Desain yang baik bukan hanya terlihat menarik, tetapi juga mampu menciptakan pengalaman yang berkesan."*
 
-⭐ If you like this project, consider giving it a star.
+---
 
-</div>
+## ⭐ Dukungan
+
+Jika Anda menyukai proyek ini:
+
+- Berikan ⭐ pada repository ini
+- Bagikan kepada teman Anda
+- Gunakan sebagai referensi belajar
+
+Terima kasih telah mengunjungi proyek ini 🙌
