@@ -115,10 +115,6 @@ kebab-empire/
 └── README.md
 ```
 
----
-
-## 🖼 Bagian Website
-
 ### 🏠 Beranda
 Halaman utama yang menampilkan identitas brand dan ajakan untuk melakukan pemesanan.
 
@@ -147,7 +143,6 @@ Formulir dan tombol pemesanan langsung.
 Informasi tambahan, navigasi, dan media sosial.
 
 ---
-
 ## ⚙️ Cara Menjalankan Proyek
 
 ### 1. Clone Repository
@@ -202,7 +197,7 @@ Proyek ini dibuat untuk menggabungkan:
 
 ## 👨‍💻 Developer
 
-Dibuat oleh **Mam Digital**
+Dibuat oleh **Hammamdev**
 
 > *"Desain yang baik bukan hanya terlihat menarik, tetapi juga mampu menciptakan pengalaman yang berkesan."*
 
