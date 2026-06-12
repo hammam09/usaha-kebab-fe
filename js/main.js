@@ -45,18 +45,6 @@ function orderWA(product) {
     window.open(`https://wa.me/6281234567890?text=${text}`, '_blank');
 }
 
-// 4. Promo Countdown Timer (Simulated 12 hours)
-let time = 12 * 3600 + 30 * 60 + 45; // 12h 30m 45s in seconds
-setInterval(() => {
-    let h = Math.floor(time / 3600);
-    let m = Math.floor((time % 3600) / 60);
-    let s = time % 60;
-    document.getElementById('hours').innerText = h < 10 ? '0'+h : h;
-    document.getElementById('minutes').innerText = m < 10 ? '0'+m : m;
-    document.getElementById('seconds').innerText = s < 10 ? '0'+s : s;
-    if(time > 0) time--;
-}, 1000);
-
 // 5. Price Calculator Logic
 const calcProduct = document.getElementById('calc-product');
 const calcQty = document.getElementById('calc-qty');
