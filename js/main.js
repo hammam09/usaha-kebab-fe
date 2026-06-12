@@ -1,208 +1,135 @@
-/* =========================
-   MOBILE NAVBAR
-========================= */
-
-const menuBtn = document.getElementById("menu-btn");
-const navLinks = document.querySelector(".nav-links");
-
-menuBtn?.addEventListener("click", () => {
-    navLinks.classList.toggle("active");
-    menuBtn.classList.toggle("active");
+// 1. Initialize AOS Animation
+AOS.init({
+    duration: 800,
+    once: true,
+    offset: 100
 });
 
+// 2. Navbar Scroll Effect & Mobile Menu Toggle
+const navbar = document.getElementById('navbar');
+const menuToggle = document.querySelector('.menu-toggle');
+const navLinks = document.querySelector('.nav-links');
 
-/* =========================
-   STICKY NAV EFFECT
-========================= */
-
-const header = document.querySelector(".header");
-
-window.addEventListener("scroll", () => {
+window.addEventListener('scroll', () => {
     if (window.scrollY > 50) {
-        header.classList.add("sticky");
+        navbar.classList.add('scrolled');
     } else {
-        header.classList.remove("sticky");
+        navbar.classList.remove('scrolled');
     }
 });
 
-
-/* =========================
-   COUNTDOWN TIMER
-   (PROMO SECTION)
-========================= */
-
-const daysEl = document.getElementById("days");
-const hoursEl = document.getElementById("hours");
-const minutesEl = document.getElementById("minutes");
-const secondsEl = document.getElementById("seconds");
-
-const targetDate = new Date("December 31, 2026 23:59:59").getTime();
-
-function updateCountdown() {
-
-    const now = new Date().getTime();
-    const distance = targetDate - now;
-
-    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-    if (daysEl) daysEl.innerText = days;
-    if (hoursEl) hoursEl.innerText = hours;
-    if (minutesEl) minutesEl.innerText = minutes;
-    if (secondsEl) secondsEl.innerText = seconds;
-
-}
-
-setInterval(updateCountdown, 1000);
-updateCountdown();
-
-
-/* =========================
-   LOADING SCREEN
-========================= */
-
-window.addEventListener("load", () => {
-
-    const loader = document.getElementById("loader");
-
-    if (loader) {
-        setTimeout(() => {
-            loader.style.opacity = "0";
-            loader.style.transition = "0.5s";
-
-            setTimeout(() => {
-                loader.style.display = "none";
-            }, 500);
-
-        }, 800);
+menuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+    menuToggle.classList.toggle('active');
+    const icon = menuToggle.querySelector('i');
+    if(navLinks.classList.contains('active')){
+        icon.classList.remove('fa-bars');
+        icon.classList.add('fa-times');
+    } else {
+        icon.classList.remove('fa-times');
+        icon.classList.add('fa-bars');
     }
-
 });
 
+// Close mobile menu when a link is clicked
+document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+        menuToggle.querySelector('i').classList.replace('fa-times', 'fa-bars');
+    });
+});
 
-/* =========================
-   SCROLL PROGRESS BAR
-========================= */
+// 3. WhatsApp Ordering Function (Menu Cards)
+function orderWA(product) {
+    const text = `Halo Abah Kebab,%0A%0ASaya ingin memesan:%0AProduk: ${product}%0AJumlah: 1%0A%0AMohon info total dan cara pembayarannya.`;
+    window.open(`https://wa.me/6281234567890?text=${text}`, '_blank');
+}
 
-const progressBar = document.getElementById("progress-bar");
+// 4. Promo Countdown Timer (Simulated 12 hours)
+let time = 12 * 3600 + 30 * 60 + 45; // 12h 30m 45s in seconds
+setInterval(() => {
+    let h = Math.floor(time / 3600);
+    let m = Math.floor((time % 3600) / 60);
+    let s = time % 60;
+    document.getElementById('hours').innerText = h < 10 ? '0'+h : h;
+    document.getElementById('minutes').innerText = m < 10 ? '0'+m : m;
+    document.getElementById('seconds').innerText = s < 10 ? '0'+s : s;
+    if(time > 0) time--;
+}, 1000);
 
-window.addEventListener("scroll", () => {
+// 5. Price Calculator Logic
+const calcProduct = document.getElementById('calc-product');
+const calcQty = document.getElementById('calc-qty');
+const outSubtotal = document.getElementById('out-subtotal');
+const outDiscount = document.getElementById('out-discount');
+const outTotal = document.getElementById('out-total');
+const btnCalcOrder = document.getElementById('btn-calc-order');
 
-    const scrollTop = document.documentElement.scrollTop;
-    const scrollHeight =
-        document.documentElement.scrollHeight -
-        document.documentElement.clientHeight;
-
-    const progress = (scrollTop / scrollHeight) * 100;
-
-    if (progressBar) {
-        progressBar.style.width = progress + "%";
+function updateCalculator() {
+    const price = parseInt(calcProduct.value);
+    const qty = parseInt(calcQty.value) || 1;
+    const productName = calcProduct.options[calcProduct.selectedIndex].text.split(' - ')[0];
+    
+    const subtotal = price * qty;
+    let discount = 0;
+    
+    // Dummy discount logic: 10% if qty >= 5
+    if(qty >= 5) {
+        discount = subtotal * 0.1;
     }
+    
+    const total = subtotal - discount;
 
-});
+    // Format Rupiah
+    const formatRp = (num) => 'Rp ' + num.toLocaleString('id-ID');
+    
+    outSubtotal.innerText = formatRp(subtotal);
+    outDiscount.innerText = formatRp(discount);
+    outTotal.innerText = formatRp(total);
 
-
-/* =========================
-   SMOOTH SCROLL NAV
-========================= */
-
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-
-    anchor.addEventListener("click", function (e) {
-
-        e.preventDefault();
-
-        const target = document.querySelector(this.getAttribute("href"));
-
-        if (target) {
-            target.scrollIntoView({
-                behavior: "smooth"
-            });
-        }
-
-    });
-
-});
-
-
-/* =========================
-   CLOSE MOBILE MENU ON CLICK
-========================= */
-
-document.querySelectorAll(".nav-links a").forEach(link => {
-
-    link.addEventListener("click", () => {
-        navLinks.classList.remove("active");
-        menuBtn.classList.remove("active");
-    });
-
-});
-
-
-/* =========================
-   SIMPLE FADE-IN ON SCROLL
-   (LIGHTWEIGHT VERSION)
-========================= */
-
-const observer = new IntersectionObserver((entries) => {
-
-    entries.forEach(entry => {
-
-        if (entry.isIntersecting) {
-            entry.target.classList.add("show");
-        }
-
-    });
-
-}, {
-    threshold: 0.1
-});
-
-document.querySelectorAll(".section, .feature-card, .menu-card, .about-card, .testimonial-card").forEach(el => {
-    el.classList.add("hidden");
-    observer.observe(el);
-});
-
-
-/* =========================
-   ADD SCROLL ANIMATION STYLE
-   (INJECTED JS STYLE)
-========================= */
-
-const style = document.createElement("style");
-
-style.innerHTML = `
-.hidden{
-    opacity:0;
-    transform:translateY(40px);
-    transition:0.8s ease;
+    // Update WA Link
+    const waText = `Halo Abah Kebab,%0A%0ASaya ingin memesan:%0AProduk: ${productName}%0AJumlah: ${qty}%0ATotal Estimasi: ${formatRp(total)}%0A%0AMohon proses pesanan saya.`;
+    btnCalcOrder.onclick = () => window.open(`https://wa.me/6281234567890?text=${waText}`, '_blank');
 }
 
-.show{
-    opacity:1;
-    transform:translateY(0);
-}
-`;
+calcProduct.addEventListener('change', updateCalculator);
+calcQty.addEventListener('input', updateCalculator);
+updateCalculator(); // init
 
-document.head.appendChild(style);
+// 6. Initialize Swiper for Testimonials
+var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+    },
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+    breakpoints: {
+        640: { slidesPerView: 2 },
+        1024: { slidesPerView: 3 }
+    }
+});
 
-
-/* =========================
-   BUTTON CLICK EFFECT
-========================= */
-
-document.querySelectorAll("button, .btn-primary, .btn-secondary").forEach(btn => {
-
-    btn.addEventListener("click", () => {
-
-        btn.style.transform = "scale(0.95)";
-
-        setTimeout(() => {
-            btn.style.transform = "scale(1)";
-        }, 150);
-
+// 7. FAQ Accordion Logic
+const faqItems = document.querySelectorAll('.faq-item');
+faqItems.forEach(item => {
+    const question = item.querySelector('.faq-question');
+    question.addEventListener('click', () => {
+        const isActive = item.classList.contains('active');
+        faqItems.forEach(faq => faq.classList.remove('active')); // close all
+        if(!isActive) item.classList.add('active'); // open clicked
     });
+});
 
+// 8. Contact Form to WhatsApp
+document.getElementById('contact-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const name = document.getElementById('contact-name').value;
+    const msg = document.getElementById('contact-msg').value;
+    const waText = `Halo Abah Kebab,%0A%0ANama: ${name}%0APesan: ${msg}`;
+    window.open(`https://wa.me/6281234567890?text=${waText}`, '_blank');
 });
