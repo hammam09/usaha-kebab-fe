@@ -42,7 +42,7 @@ document.querySelectorAll('.nav-links a').forEach(link => {
 // 3. WhatsApp Ordering Function (Menu Cards)
 function orderWA(product) {
     const text = `Halo Abah Kebab,%0A%0ASaya ingin memesan:%0AProduk: ${product}%0AJumlah: 1%0A%0AMohon info total dan cara pembayarannya.`;
-    window.open(`https://wa.me/6281234567890?text=${text}`, '_blank');
+    window.open(`https://wa.me/085882025015?text=${text}`, '_blank');
 }
 
 // 5. Price Calculator Logic
@@ -77,7 +77,7 @@ function updateCalculator() {
 
     // Update WA Link
     const waText = `Halo Abah Kebab,%0A%0ASaya ingin memesan:%0AProduk: ${productName}%0AJumlah: ${qty}%0ATotal Estimasi: ${formatRp(total)}%0A%0AMohon proses pesanan saya.`;
-    btnCalcOrder.onclick = () => window.open(`https://wa.me/6281234567890?text=${waText}`, '_blank');
+    btnCalcOrder.onclick = () => window.open(`https://wa.me/085882025015?text=${waText}`, '_blank');
 }
 
 calcProduct.addEventListener('change', updateCalculator);
@@ -119,5 +119,5 @@ document.getElementById('contact-form').addEventListener('submit', function(e) {
     const name = document.getElementById('contact-name').value;
     const msg = document.getElementById('contact-msg').value;
     const waText = `Halo Abah Kebab,%0A%0ANama: ${name}%0APesan: ${msg}`;
-    window.open(`https://wa.me/6281234567890?text=${waText}`, '_blank');
+    window.open(`https://wa.me/085882025015?text=${waText}`, '_blank');
 });
